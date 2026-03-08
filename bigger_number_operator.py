@@ -14,19 +14,19 @@ while True:
         input_first_number = float(input(f'{color.yellow + color.bold}ENTER FIRST NUMBER -->{color.end} '))
         input_second_number = float(input(f'{color.yellow + color.bold}ENTER SECOND NUMBER -->{color.end} '))
         
-        input_first_number_colored = f'{color.purple + color.bold}{input_first_number}{color.end}'
-        input_second_number_colored = f'{color.purple + color.bold}{input_second_number}{color.end}'
+        first_number_colored = f'{color.purple + color.bold}{input_first_number}{color.end}'
+        second_number_colored = f'{color.purple + color.bold}{input_second_number}{color.end}'
 
         if input_first_number > input_second_number:
-            print(f'{input_first_number_colored} is greater than {input_second_number_colored}')
+            print(f'{first_number_colored} is greater than {second_number_colored}')
             break
         
         elif input_first_number == input_second_number:
-            print(f'{input_first_number_colored} is equal to {input_second_number_colored}')
+            print(f'{first_number_colored} is equal to {second_number_colored}')
             break
         
         else:
-            print(f'{input_second_number_colored} is greater than {input_first_number_colored}')
+            print(f'{second_number_colored} is greater than {first_number_colored}')
             break
     
     except ValueError as e:

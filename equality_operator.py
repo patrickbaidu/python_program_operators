@@ -14,17 +14,17 @@ while True:
         input_first_number = float(input(f'{color.yellow + color.bold}ENTER FIRST NUMBER -->{color.end} '))
         input_second_number = float(input(f'{color.yellow + color.bold}ENTER SECOND NUMBER -->{color.end} '))
         
-        input_first_number_colored_green = f'{color.green + color.bold}{input_first_number}{color.end}'
-        input_second_number_colored_green = f'{color.green + color.bold}{input_second_number}{color.end}'
-        input_first_number_colored_red = f'{color.red + color.bold}{input_first_number}{color.end}'
-        input_second_number_colored_red = f'{color.red + color.bold}{input_second_number}{color.end}'
+        first_number_colored_green = f'{color.green + color.bold}{input_first_number}{color.end}'
+        second_number_colored_green = f'{color.green + color.bold}{input_second_number}{color.end}'
+        first_number_colored_red = f'{color.red + color.bold}{input_first_number}{color.end}'
+        second_number_colored_red = f'{color.red + color.bold}{input_second_number}{color.end}'
 
         if input_first_number == input_second_number:
-            print(f'{input_first_number_colored_green} is equal to {input_second_number_colored_green}')
+            print(f'{first_number_colored_green} is equal to {second_number_colored_green}')
             break
         
         else:
-            print(f'{input_first_number_colored_red} is not equal to {input_second_number_colored_red}')
+            print(f'{first_number_colored_red} is not equal to {second_number_colored_red}')
             break
         
     except ValueError as e:
