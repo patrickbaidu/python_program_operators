@@ -1,21 +1,21 @@
 class color:
-    PURPLE = '\033[95m'
-    RED = '\033[91m'
-    YELLOW = '\033[93m'
-    BLUE = '\033[94m'
-    CYAN = '\033[96m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
-    END = '\033[0m'
-    GREEN = '\033[92m'
+    purple = '\033[95m'
+    red = '\033[91m'
+    yellow = '\033[93m'
+    blue = '\033[94m'
+    cyan = '\033[96m'
+    bold = '\033[1m'
+    underline = '\033[4m'
+    end = '\033[0m'
+    green = '\033[92m'
 
 while True:
     try:
-        input_first_number = float(input(f'{color.YELLOW + color.BOLD}ENTER FIRST NUMBER -->{color.END} '))
-        input_second_number = float(input(f'{color.YELLOW + color.BOLD}ENTER SECOND NUMBER -->{color.END} '))
+        input_first_number = float(input(f'{color.yellow + color.bold}ENTER FIRST NUMBER -->{color.end} '))
+        input_second_number = float(input(f'{color.yellow + color.bold}ENTER SECOND NUMBER -->{color.end} '))
         
-        input_first_number_colored = f'{color.PURPLE + color.BOLD}{input_first_number}{color.END}'
-        input_second_number_colored = f'{color.PURPLE + color.BOLD}{input_second_number}{color.END}'
+        input_first_number_colored = f'{color.purple + color.bold}{input_first_number}{color.end}'
+        input_second_number_colored = f'{color.purple + color.bold}{input_second_number}{color.end}'
 
         if input_first_number > input_second_number:
             print(f'{input_first_number_colored} is greater than {input_second_number_colored}')
@@ -30,4 +30,4 @@ while True:
             break
     
     except ValueError as e:
-        print(f'{color.RED + color.RED}Input an appropriate value. Please try again.{color.END}')
+        print(f'{color.red + color.bold}Input an appropriate value. Please try again.{color.end}')
