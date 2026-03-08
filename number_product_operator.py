@@ -20,7 +20,7 @@ try:
     product_of_numbers_colored = f'{color.green}{product_of_numbers}{color.end}'
     
     print(f'{first_number_bold} x {second_number_bold} = {product_of_numbers_colored}')
-    print(f'{product_of_numbers_colored} is the sum of the two numbers.')
+    print(f'{product_of_numbers_colored} is the product of the two numbers.')
         
 except ValueError as e:
     print(f'{color.red + color.bold}Input an appropriate value. Please try again.{color.end}')
