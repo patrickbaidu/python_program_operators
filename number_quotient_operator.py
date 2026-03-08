@@ -21,6 +21,6 @@ try:
     
     print(f'{first_number_bold} ÷ {second_number_bold} = {quotient_of_numbers_colored}')
     print(f'{quotient_of_numbers_colored} is the quotient of the two numbers.')
-        
+    
 except ValueError as e:
     print(f'{color.red + color.bold}Input an appropriate value. Please try again.{color.end}')
