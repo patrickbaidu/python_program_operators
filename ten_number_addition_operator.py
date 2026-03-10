@@ -40,6 +40,5 @@ try:
     print(f'Sum of {equation_of_list} =')
     print(summation_of_numbers)
 
-    
 except ValueError as e:
     print(f'{color.red + color.bold}Input an appropriate value. Please try again.{color.end}')

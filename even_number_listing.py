@@ -18,6 +18,5 @@ try:
             number_bold = f'{color.bold}{number}{color.end}'
             print(number_bold, end=", ")
 
-        
 except ValueError as e:
     print(f'{color.red + color.bold}Input an appropriate value. Please try again.{color.end}')
