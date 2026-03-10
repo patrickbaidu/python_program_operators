@@ -11,7 +11,12 @@ class color:
 
 try:
 
-
+    print(f'{color.yellow + color.bold}{'-'*4} LISTS OF NUMBERS FROM 0-100 WITHOUT ZEROES {'-'*4}{color.end}')
+    
+    for number in range(0, 101):
+        if number % 10 != 0:
+            number_bold = f'{color.bold}{number}{color.end}'
+            print(number_bold, end=", ")
 
 except ValueError as e:
     print(f'{color.red + color.bold}Input an appropriate value. Please try again.{color.end}')
