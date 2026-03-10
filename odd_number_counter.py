@@ -10,7 +10,6 @@ class color:
     green = '\033[92m'
 
 try:
-    
     number_list = []
     odd_number_list = []
     

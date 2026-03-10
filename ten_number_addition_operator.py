@@ -10,7 +10,6 @@ class color:
     green = '\033[92m'
 
 try:
-    
     increment_of_input_number = 0
     input_number_list = []
     

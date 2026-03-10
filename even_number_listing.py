@@ -10,7 +10,6 @@ class color:
     green = '\033[92m'
 
 try:
-    
     print(f'{color.yellow + color.bold}{'-'*4} LISTS OF EVEN NUMBERS FROM 0-100 {'-'*4}{color.end}')
     
     for number in range(0, 101):
