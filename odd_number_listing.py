@@ -1,0 +1,23 @@
+class color:
+    purple = '\033[95m'
+    red = '\033[91m'
+    yellow = '\033[93m'
+    blue = '\033[94m'
+    cyan = '\033[96m'
+    bold = '\033[1m'
+    underline = '\033[4m'
+    end = '\033[0m'
+    green = '\033[92m'
+
+try:
+    print(f'{color.yellow + color.bold}{'-'*4} LISTS OF EVEN NUMBERS FROM 0-100 {'-'*4}{color.end}')
+    
+    number = 100
+    
+    while number in range(0, 101):
+        if number % 2 == 1:
+            number_bold = f'{color.bold}{number}{color.end}'
+            print(number_bold, end=", ")
+
+except ValueError as e:
+    print(f'{color.red + color.bold}Input an appropriate value. Please try again.{color.end}')
