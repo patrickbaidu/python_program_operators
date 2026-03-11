@@ -13,11 +13,17 @@ try:
     print(f'{color.yellow + color.bold}{'-'*4} LISTS OF EVEN NUMBERS FROM 0-100 {'-'*4}{color.end}')
     
     number = 100
+    odd_number_list = []
     
-    while number in range(0, 101):
+    while number > 0:
+        number -= 1
         if number % 2 == 1:
-            number_bold = f'{color.bold}{number}{color.end}'
-            print(number_bold, end=", ")
+            odd_number_list.append(number)
+    
+    list_of_odd_numbers = ', '.join(str(number) for number in odd_number_list)
+    list_of_odd_numbers = f'{color.bold}{list_of_odd_numbers}{color.end}'
+    
+    print(list_of_odd_numbers)
 
 except ValueError as e:
     print(f'{color.red + color.bold}Input an appropriate value. Please try again.{color.end}')
