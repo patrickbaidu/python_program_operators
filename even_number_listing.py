@@ -9,7 +9,7 @@ class color:
     end = '\033[0m'
     green = '\033[92m'
 
-print(f'{color.yellow + color.bold}{'-'*4} LISTS OF EVEN NUMBERS FROM 0-100 {'-'*4}{color.end}')
+print(f'{color.yellow + color.bold}{'-'*4} LIST OF EVEN NUMBERS FROM 0-100 {'-'*4}{color.end}')
 
 for number in range(0, 101):
     if number % 2 == 0:
