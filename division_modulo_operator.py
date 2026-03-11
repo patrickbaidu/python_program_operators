@@ -20,11 +20,11 @@ try:
     remainder_of_quotient_colored = f'{color.green}{remainder_of_quotient}{color.end}'
     
     if remainder_of_quotient > 0:
-        print(f'{second_number_bold} ÷ {first_number_bold} has the remainder of {remainder_of_quotient_colored}')
+        print(f'{second_number_bold} ÷ {first_number_bold} has a remainder of {remainder_of_quotient_colored}')
         print(f'{remainder_of_quotient_colored} is the remainder of the two numbers.')
     
     else:
-        print(f'{second_number_bold} ÷ {first_number_bold} has the remainder of {remainder_of_quotient_colored}')
+        print(f'{second_number_bold} ÷ {first_number_bold} has a remainder of {remainder_of_quotient_colored}')
         print(f'The are no remainder for the two numbers. The value is {remainder_of_quotient_colored}.')
     
 except ValueError as e:
