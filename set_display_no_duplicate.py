@@ -28,7 +28,7 @@ try:
         
         count_data = input_number_list.count(input_number)
         
-        if count_data > 1:
+        if count_data != 1:
             for similar_data in input_number_list:
                 input_number_list.pop(count_data)    
     
