@@ -9,7 +9,21 @@ class color:
     end = '\033[0m'
     green = '\033[92m'
 
-try:
+input_number_list = []
     
-except ValueError as e:
-    print(f'{color.red + color.bold}Input an appropriate value. Please try again.{color.end}')
+while True:
+    try:
+        user_input_number = int(input(f'{color.yellow + color.bold}ENTER A NUMBER --> {color.end}'))
+
+        if user_input_number in input_number_list:
+            print('duplicate')
+        
+        else:
+            print('unique')
+            input_number_list.append(user_input_number)
+
+
+    except ValueError as e:
+        print(f'{color.red + color.bold}Input an appropriate value. {color.end}')
+        break
+
