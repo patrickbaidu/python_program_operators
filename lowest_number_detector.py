@@ -22,4 +22,3 @@ while True:
     except ValueError as e:
         print(f'{color.red + color.bold}Input an appropriate value. {color.end}')
         break
-
