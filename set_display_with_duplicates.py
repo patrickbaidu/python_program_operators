@@ -11,40 +11,32 @@ class color:
 
 try:
     input_number_list = []
-    input_number_duplicate_list = []
+    input_number_set = set()
     
     for user_input in range(1,11):
         if user_input == 1:
             input_number = input(f'{color.yellow + color.bold} ENTER {user_input}ST NUMBER --> {color.end}' )
-            input_number_list.append(input_number)
         elif user_input == 2:
             input_number = input(f'{color.yellow + color.bold} ENTER {user_input}ND NUMBER --> {color.end}')
-            if input_number in input_number_list:
-                input_number_duplicate_list.append(input_number)
-            else:
-                input_number_list.append(input_number)
         elif user_input == 3:
             input_number = input(f'{color.yellow + color.bold} ENTER {user_input}RD NUMBER --> {color.end}')
-            if input_number in input_number_list:
-                input_number_duplicate_list.append(input_number)
-            else:
-                input_number_list.append(input_number)
         else:
             input_number = input(f'{color.yellow + color.bold} ENTER {user_input}TH NUMBER --> {color.end}')
-            if input_number in input_number_list:
-                input_number_duplicate_list.append(input_number)
-            else:
-                input_number_list.append(input_number)
+
+        if input_number in input_number_list:
+            input_number_set.add(input_number)
+        else:
+            input_number_list.append(input_number)
         
-        count_data = input_number_duplicate_list.count(input_number)
-        
-        if count_data > 1:
-            for similar_data in input_number_duplicate_list:
-                input_number_duplicate_list.pop(count_data)
-        
-    display_list = ", ".join(number for number in input_number_duplicate_list)
+    display_list = ", ".join(number for number in input_number_set)
     
-    print(f'A Set of {color.cyan + color.bold}{display_list}{color.end}')
+    count_list = len(input_number_set)
+    
+    if count_list != 0:
+        print(f'A Set of {color.cyan + color.bold}{display_list}{color.end}')
+    
+    else:
+        print(f'{color.red + color.bold}NO EXISTING DUPLICATES{color.end}')
 
 except ValueError as e:
     print(f'{color.red + color.bold}Input an appropriate value. Please try again.{color.end}')
