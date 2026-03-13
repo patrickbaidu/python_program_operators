@@ -9,7 +9,18 @@ class color:
     end = '\033[0m'
     green = '\033[92m'
 
-try:
+while True:
+    try:
+        user_input = input(f'{color.yellow + color.bold}ENTER FULL NAME --> {color.end}')
+        
+        if not user_input.replace(' ', '').isalpha():
+            raise ValueError
 
-except ValueError as e:
-    print(f'{color.red + color.bold}Input an appropriate value. Please try again.{color.end}')
+    except ValueError as e:
+        print(f'{color.red + color.bold}Input an appropriate value. Please try again.{color.end}')
+    else:
+        user_input = user_input.strip()
+        user_input = user_input.split()
+        word_count = len(user_input)
+        print(f'WORD COUNT: {color.green + color.bold}{word_count}{color.end}')
+        break
