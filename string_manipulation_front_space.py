@@ -8,3 +8,8 @@ class color:
     underline = '\033[4m'
     end = '\033[0m'
     green = '\033[92m'
+
+try:
+
+except ValueError as e:
+    print(f'{color.red + color.bold}Input an appropriate value. Please try again.{color.end}')
